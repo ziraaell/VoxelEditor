@@ -4,10 +4,10 @@
 
 ## Spis treści
 * [Opis projektu](#opis-projektu)
-* [Struktura projektu](#project-structure)
-* [Instrukcja uruchomienia](#instrukcja_obsluga)
-* [Technologie](#setup)
-* [Zrzuty ekranu](#screenshots)
+* [Struktura projektu](#struktura-projektu)
+* [Instrukcja uruchomienia](#instrukcja-uruchomienia)
+* [Technologie](#technologie)
+* [Zrzuty ekranu](#zrzuty-ekranu)
 
 
 ## Opis projektu
@@ -36,18 +36,18 @@ Car-Rental-Databases-Project/
 ## Instrukcja uruchomienia
 1. Sklonuj repozytorium i przejdź do folderu
     ```bash
-        https://github.com/ziraaell/VoxelEditor.git && cd VoxelEditor
+    https://github.com/ziraaell/VoxelEditor.git && cd VoxelEditor
     ```
 
 2.  Utworzenie środowiska
     ```bash
-        python -m venv venv
+    python -m venv venv
     ```
 
 3. Aktywacja środowiska
    - Windows
      ```bash
-          venv\Scripts\activate
+     venv\Scripts\activate
      ```
 
     - Linux/macOS
@@ -56,13 +56,13 @@ Car-Rental-Databases-Project/
       ```
 4. Instalacja zależności
     ```bash
-        python -m pip install --upgrade pip
-        python -m pip install -r requirements.txt
+    python -m pip install --upgrade pip
+    python -m pip install -r requirements.txt
     ```
 
 5. Uruchomienie programu
     ```bash
-        python app.py
+    python app.py
     ```
 
 ## Technologie 
@@ -79,3 +79,25 @@ Zbiór tekstur w folderze Textures/:
 - [wood.jpg](https://stablediffusionweb.com/image/20172220-cartoon-wood-texture-game-art)
 - [sand.jpg](https://www.istockphoto.com/illustrations/background-of-beach-sand-texture-seamless)
 - [leaves.jpg](https://kr.pinterest.com/pin/713187291026216994/)
+
+## Zrzuty ekranu
+1. Ekran startowy
+<img width="1084" height="876" alt="image" src="https://github.com/user-attachments/assets/b1457687-0ed9-4097-81c4-44498496a926" />
+
+2. Obracanie kamerą
+![gif1](https://github.com/user-attachments/assets/6d2e7f37-ee32-4d4f-b95e-e26cbba0fe94)
+
+3. Przybliżanie kamerą
+![gif2](https://github.com/user-attachments/assets/c6b2979c-c553-456e-8c05-24f239e9b87c)
+
+4. Usuwanie bloków
+![gif3](https://github.com/user-attachments/assets/12f76214-1a48-446f-ac94-bd7a1b0cee3b)
+
+5. Dodawanie bloków
+![gif4](https://github.com/user-attachments/assets/e84185a8-1f36-4fb3-9cf3-6e17a43f6895)
+
+6. Wybór tekstur
+![gif5](https://github.com/user-attachments/assets/b71917a6-69c6-410a-bbba-8236cedfd570)
+  
+
+   
