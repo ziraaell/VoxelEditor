@@ -161,7 +161,7 @@ class App:
 
             draw_text_2d(10, height - 20,  "A: dodaj blok")
             draw_text_2d(10, height - 40,  "D: usun blok")
-            draw_text_2d(10, height - 60,  "Klawisze 1-5: wybór materiału (1-drewno, 2-trawa, 3-kamien, 4-piasek, 5-liście)")
+            draw_text_2d(10, height - 60,  "Klawisze 1-5: wybór materialu (1-drewno, 2-trawa, 3-kamien, 4-piasek, 5-liście)")
             draw_text_2d(10, height - 80,  "Rolka: zoom")
             draw_text_2d(10, height - 100, "PPM + ruch myszą: obracanie kamery")
             glfw.swap_buffers(self.window)

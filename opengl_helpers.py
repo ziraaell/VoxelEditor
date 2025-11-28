@@ -6,7 +6,6 @@ import ctypes
 import numpy as np
 from PIL import Image
 
-from shaders import VERTEX_SHADER_SRC, FRAGMENT_SHADER_SRC
 from utils import create_cube_geometry
 from constants import WIDTH, HEIGHT, VOXEL_SIZE
 
@@ -33,7 +32,10 @@ def init_shaders():
     :return: tuple (program, loc_view, loc_proj, loc_selected, loc_highlight, loc_light, loc_viewpos)
     """
 
-    program = compileProgram(compileShader(VERTEX_SHADER_SRC, GL.GL_VERTEX_SHADER), compileShader(FRAGMENT_SHADER_SRC, GL.GL_FRAGMENT_SHADER))
+    vertex_src = load_shader_source("shaders/voxel.vert")
+    fragment_src = load_shader_source("shaders/voxel.frag")
+
+    program = compileProgram(compileShader(vertex_src, GL.GL_VERTEX_SHADER), compileShader(fragment_src, GL.GL_FRAGMENT_SHADER))
     GL.glUseProgram(program)
 
     loc_view = GL.glGetUniformLocation(program, "u_view")
@@ -140,6 +142,15 @@ def load_texture(path):
     GL.glBindTexture(GL.GL_TEXTURE_2D, 0)
     return tex_id
 
+def load_shader_source(path: str):
+    """
+    Ładuje kod źródłowy shadera z pliku.
+    :param str path: Ścieżka do pliku shadera.
+    :return: Kod źródłowy shadera jako string.
+    """
+    with open(path, "r", encoding="utf-8") as f:
+        return f.read()
+
 
 def update_offsets_buffer(vbo_offsets, offsets):
     """
@@ -154,7 +165,15 @@ def update_offsets_buffer(vbo_offsets, offsets):
         GL.glBufferData(GL.GL_ARRAY_BUFFER, offsets.nbytes, offsets, GL.GL_DYNAMIC_DRAW)
     else:
         GL.glBufferData(GL.GL_ARRAY_BUFFER, 0, None, GL.GL_DYNAMIC_DRAW)
+
 def update_materials_buffer(vbo_materials, material_ids):
+    """
+    Aktualizuje bufor identyfikatorów materiałów instancji.
+
+    :param int vbo_materials: ID bufora identyfikatorów materiałów.
+    :param list material_ids: Lista identyfikatorów materiałów.
+    """
+
     GL.glBindBuffer(GL.GL_ARRAY_BUFFER, vbo_materials)
 
     if material_ids is not None and len(material_ids) > 0:
@@ -218,7 +237,7 @@ def draw_text_2d(x, y, text, font=GLUT.GLUT_BITMAP_9_BY_15):
     :param str text: Tekst do wyświetlenia.
     :param font: Czcionka GLUT do użycia.
     """
-    
+
     GL.glUseProgram(0)
     GL.glColor3f(1.0, 1.0, 1.0)
     GL.glWindowPos2f(x, y)
