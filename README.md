@@ -82,21 +82,27 @@ Zbiór tekstur w folderze Textures/:
 
 ## Zrzuty ekranu
 1. Ekran startowy
-<img width="1084" height="876" alt="image" src="https://github.com/user-attachments/assets/b1457687-0ed9-4097-81c4-44498496a926" />
+   
+<img width="1000" height="800" alt="image" src="https://github.com/user-attachments/assets/b1457687-0ed9-4097-81c4-44498496a926" />
 
 2. Obracanie kamerą
+   
 ![gif1](https://github.com/user-attachments/assets/6d2e7f37-ee32-4d4f-b95e-e26cbba0fe94)
 
 3. Przybliżanie kamerą
+   
 ![gif2](https://github.com/user-attachments/assets/c6b2979c-c553-456e-8c05-24f239e9b87c)
 
 4. Usuwanie bloków
+   
 ![gif3](https://github.com/user-attachments/assets/12f76214-1a48-446f-ac94-bd7a1b0cee3b)
 
 5. Dodawanie bloków
+    
 ![gif4](https://github.com/user-attachments/assets/e84185a8-1f36-4fb3-9cf3-6e17a43f6895)
 
 6. Wybór tekstur
+    
 ![gif5](https://github.com/user-attachments/assets/b71917a6-69c6-410a-bbba-8236cedfd570)
   
 
